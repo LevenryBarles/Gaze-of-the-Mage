@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaze of the Mage</title>
+    <style>
+       @font-face {
+  font-family: 'ronysiswadi';
+  src: url('ronysiswadi.ttf') format('truetype'); /* Update with the correct path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+            touch-action: none;
+            -webkit-tap-highlight-color: transparent;
+            overflow: hidden;
+            user-select: none;
+        }
+
+ header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    animation: glitter 1s infinite; /* Use 'glitter' animation for the header */
+    background: url('glitter.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+@keyframes glitter {
+    0%, 100% {
+        filter: brightness(100%); /* Fully bright */
+    }
+
+    50% {
+        filter: brightness(150%); /* Increased brightness for sparkling effect */
+    }
+}
+
+
+
+        img {
+            width: 80%; /* Make the image cover the entire width of the header */
+            height: auto; /* Maintain the aspect ratio */
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+      button {
+        font-family: 'ronysiswadi', sans-serif; /* Use the custom font */
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #3593D2, #792DBA); /* Gradient background for a magical touch */
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a magical glow */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+button:active {
+    transform: scale(0.9); /* Slightly scale down on active state for a pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust box shadow on active state */
+}
+
+
+        #startButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        #exitButton {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+p {
+  font-family: 'ronysiswadi', sans-serif; /* Use the custom font */
+    background: linear-gradient(to bottom, #3593D2, #792DBA);
+    -webkit-background-clip: text;
+    color: transparent;
+      font-size: 21px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    filter: brightness(300%);
+}
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="nav.png" alt="Gaze of the Mage">
+</header>
+
+<main>
+    <p>Welcome to the magical world of Gaze of the Mage! Choose an option:</p>
+
+    <button id="startButton" onclick="startGame()">Start Game</button>
+    <button id="exitButton" onclick="exitGame()">About</button>
+</main>
+
+<script>
+     function startGame() {
+        // Redirect to the start page (e.g., index.html)
+        window.location.href = 'index.html';
+    }
+
+    function exitGame() {
+      window.location.href = 'about.html';
+    }
+    </script>
+</body>
+</html>
